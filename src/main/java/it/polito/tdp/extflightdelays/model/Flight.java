@@ -16,6 +16,12 @@ public class Flight {
 	private int distance;
 	private LocalDateTime arrivalDate;
 	private Double arrivalDelay;
+	
+	
+	public Flight(int originAirportId, int destinationAirportId) {
+		this.originAirportId = originAirportId;
+		this.destinationAirportId = destinationAirportId;
+	}
 
 	public Flight(int id, int airlineId, int flightNumber, String tailNumber, int originAirportId,
 			int destinationAirportId, LocalDateTime scheduledDepartureDate, Double departureDelay, Double elapsedTime,
@@ -154,8 +160,7 @@ public class Flight {
 
 	@Override
 	public String toString() {
-		return "Flight [id=" + id + ", flightNumber=" + flightNumber + ", originAirportId=" + originAirportId
-				+ ", destinationAirportId=" + destinationAirportId + "]";
+		return this.originAirportId+" "+this.destinationAirportId;
 	}
 
 }
